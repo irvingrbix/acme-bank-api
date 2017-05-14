@@ -2,7 +2,18 @@ product: 1.0.0
 info:
   name: acme-bank
   title: acme-bank
-  version: 2.5.0
+  version: 2.0.0
+visibility:
+  view:
+    enabled: true
+    type: "public"
+    tags: []
+    orgs: []
+  subscribe:
+    enabled: true
+    type: "authenticated"
+    tags: []
+    orgs: []
 apis:
   acme-bank:
     $ref: acme-bank.yaml
@@ -13,9 +24,9 @@ visibility:
     type: authenticated
 plans:
   default:
-    title: Default Plan
-    description: Default Plan
+    title: "Default Plan"
+    description: "Default Plan"
     approval: false
     rate-limit:
-      value: 100/hour
       hard-limit: false
+      value: "100/hour"
