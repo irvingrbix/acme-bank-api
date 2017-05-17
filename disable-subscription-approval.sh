@@ -3,8 +3,8 @@
 # alternative solution: use token replacement in UCD to flip the flag to "false" if deploying to non-prod environment
 
 # find the "subscribe" entry, and change the next line from true to false to turn off subscription approvals
-mv acme-bank-product.yaml acme-bank-product.old
-sed '/subscribe:/{n;s/.*/    enabled: false/}' acme-bank-product.old > acme-bank-product.yaml
+mv acme-bank-nonprod-product.yaml acme-bank-nonprod-product.old
+sed '/subscribe:/{n;s/.*/    enabled: false/}' acme-bank-nonprod-product.old > acme-bank-nonprod-product.yaml
 
 # validate that no harm was done to the file
-apic validate -p acme-bank-product.yaml
+apic validate -p acme-bank-nonprod-product.yaml
