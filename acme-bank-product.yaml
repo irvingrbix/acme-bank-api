@@ -17,11 +17,6 @@ visibility:
 apis:
   acme-bank:
     $ref: acme-bank.yaml
-visibility:
-  view:
-    type: public
-  subscribe:
-    type: authenticated
 plans:
   default:
     title: "Default Plan"

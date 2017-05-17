@@ -12,8 +12,8 @@
 #     --apis:         comma list of api (swagger) files to be referenced included in generating the product file
 
 # example: apic config:set template-path=/home/vagrant/projects/acme-bank-api
-#          apic create --type product --template test --title  myproduct --apis "acme-bank.yaml acme-card.yaml"
+#          apic create --type product --template test --title  myproduct --apis acme-card.yaml
 
 apic config:set template-path=/home/vagrant/projects/acme-bank-api
-apic create --type product --template test --title acme-bank-nonprod-product --apis "acme-bank.yaml acme-card.yaml"
+apic create --type product --template test --title acme-bank-nonprod-product --apis acme-bank.yaml
 

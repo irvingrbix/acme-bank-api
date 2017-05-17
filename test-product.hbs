@@ -1,10 +1,19 @@
 product: '1.0.0'
-
 info:
   name: {{name}}
   title: {{title}}
   version: '{{version}}'
-
+visibility:
+  view:
+    enabled: true
+    type: "public"
+    tags: []
+    orgs: []
+  subscribe:
+    enabled: true
+    type: "authenticated"
+    tags: []
+    orgs: []
 {{#isEmpty apis}}
 {{else}}
 apis:
@@ -13,13 +22,6 @@ apis:
   '{{@key}}':
     $ref: {{this}}
 {{/each}}
-
-visibility:
-  view:
-    type: public
-  subscribe:
-    type: authenticated
-
 plans:
   default:
     title: Default Plan
@@ -28,4 +30,3 @@ plans:
     rate-limit:
       value: 5/hour
       hard-limit: false
-
